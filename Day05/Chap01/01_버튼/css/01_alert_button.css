@@ -1,0 +1,23 @@
+
+
+.btn{
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    color: white;
+}
+
+.success{background-color: #04aa6d;}
+.success:hover{background-color: #46a049;}
+
+.info{background-color: #2196f3;}
+.info:hover{background-color: #0b7dda;}
+
+.warning{background-color: #ff0000;}
+.warning:hover{background-color: #4f3002;}
+
+.danger{background-color: #aa2c65;}
+.danger:hover{background-color: #f0eb42;}
+
+.default{background-color: #08d108; color: #100101;}
+.default:hover{background-color: #ddd;}
