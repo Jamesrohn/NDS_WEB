@@ -26,8 +26,8 @@ body {
 /* css 변수 선언 */
 :root {
     /* 메인 컬러 지정 */
-    --main: #84ccf8;
-    --sub: #DD4470;
+    --main: #DCE6FF;
+    --sub: #89b1ff;
     --bg-light: #F3EFEB;
     --bg-gray: #aaa;
     --neon-green: #B9CC95;
