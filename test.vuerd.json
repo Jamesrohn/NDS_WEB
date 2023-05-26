@@ -1,0 +1,228 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "Oracle",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "user",
+        "comment": "회원",
+        "columns": [
+          {
+            "name": "user_no",
+            "comment": "회원번호",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b0abb109-8825-40cd-a60e-4f6647edd896"
+          },
+          {
+            "name": "user_id",
+            "comment": "아이디",
+            "dataType": "VARCHAR2(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 96.453125,
+              "widthDefault": 60
+            },
+            "id": "9c8e225b-5a6b-4ac5-8639-d6807eb8ff80"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ab4ff44f-6793-4444-b119-843a7009cd8e"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 58.3341,
+          "top": 260.4172,
+          "zIndex": 17,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "abb6de49-e649-4651-b549-b94c89e25874"
+      },
+      {
+        "name": "board",
+        "comment": "게시판",
+        "columns": [
+          {
+            "name": "bo",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b63561a6-ab2e-4060-8027-cc24f60c1fae"
+          },
+          {
+            "name": "user_no",
+            "comment": "회원번호",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4a0b297b-865b-4e29-92b7-555b22e823b4"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 73.6116,
+          "top": 29.1669,
+          "zIndex": 16,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "00e73704-8572-488f-b077-306dad1e25ba"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "abb6de49-e649-4651-b549-b94c89e25874",
+          "columnIds": [
+            "b0abb109-8825-40cd-a60e-4f6647edd896"
+          ],
+          "x": 250.0606625,
+          "y": 260.4172,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "00e73704-8572-488f-b077-306dad1e25ba",
+          "columnIds": [
+            "4a0b297b-865b-4e29-92b7-555b22e823b4"
+          ],
+          "x": 247.1116,
+          "y": 139.1669,
+          "direction": "bottom"
+        },
+        "constraintName": "fk_user_to_board",
+        "visible": true,
+        "id": "cf04116f-f2a8-4e05-919e-38c9c714565a"
+      }
+    ]
+  }
+}
