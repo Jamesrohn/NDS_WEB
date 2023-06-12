@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+      <!-- 사이드바 -->
+      <aside id="sidebar">
+        <div class="top flex main-end">
+            <a href="javascript:;" id="btn-close">
+                <span class="material-symbols-outlined">close</span>
+            </a>
+        </div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../board/list.html">Board</a></li>
+            <li><a href="../gallery/list.html">Gallery</a></li>
+        </ul>
+    </aside>
+
     <header>
         <!-- 로그인 | 회원가입 -->
         <div class="util"></div>
@@ -16,15 +30,22 @@
         <!-- 메인 메뉴 -->
         <div class="menu">
             <nav>
-                <ul>
+                <ul class="pc">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../board/list.html">Board</a></li>
                     <li><a href="../gallery/list.html">Gallery</a></li>
                 </ul>
+                <ul class="mobile">
+                    <li>
+                        <a href="../index.html"><span class="material-symbols-outlined">home</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="btn-menu"><span class="material-symbols-outlined">menu</span></a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
-
     <section class="main container">
         <div class="inner">
             <!-- 제목 영역 -->
@@ -59,8 +80,8 @@
                     <a href="list.html" class="btn">목록</a>
                 </div>
                 <div class="item">
-                    <a href="javascript:;" class="btn" id="btn-update">수정</a>
-                    <a href="javascript:;" class="btn" id="btn-delete">삭제</a>
+                    <a href="javascript:;" class="btn btn-update">수정</a>
+                    <a href="javascript:;" class="btn btn-delete">삭제</a>
                 </div>
             </div>
         </div>
@@ -69,6 +90,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/main.js"></script>
     <script>
         // 현재 URL 가져오기
         const urlParams = new URLSearchParams(location.search)
@@ -101,7 +123,7 @@
         }
 
         // 삭제 버튼 - 클릭 이벤트
-        $('#btn-delete').on('click', function() {
+        $('.btn-delete').on('click', function() {
 
             // confirm('출력 메시지')
             // [확인] --> true
@@ -137,7 +159,7 @@
 
         })
         // 삭제 버튼 - 클릭 이벤트
-        $('#btn-update').on('click', function() {
+        $('.btn-update').on('click', function() {
 // 등록 요청
 const url = 'http://192.168.0.200:8080/api/board'
             let title = $('#title').val()

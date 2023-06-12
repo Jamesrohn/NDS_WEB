@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -148.61110520583648,
-    "scrollLeft": -263.8888784028869,
+    "scrollTop": -124.76851356066337,
+    "scrollLeft": -297.91665482852204,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -27,7 +27,7 @@
     "bracketType": "none",
     "setting": {
       "relationshipDataTypeSync": true,
-      "relationshipOptimization": false,
+      "relationshipOptimization": true,
       "columnOrder": [
         "columnName",
         "columnDataType",
@@ -43,12 +43,12 @@
   "table": {
     "tables": [
       {
-        "name": "user",
-        "comment": "회원",
+        "name": "Admin",
+        "comment": "관리자",
         "columns": [
           {
-            "name": "user_no",
-            "comment": "회원번호",
+            "name": "AdminID",
+            "comment": "관리자ID",
             "dataType": "NUMBER",
             "default": "",
             "option": {
@@ -70,9 +70,117 @@
             "id": "b0abb109-8825-40cd-a60e-4f6647edd896"
           },
           {
-            "name": "user_id",
-            "comment": "아이디",
-            "dataType": "VARCHAR2(100)",
+            "name": "ModifyMusic",
+            "comment": "음악수정",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 77.892578125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "7756d36e-e021-4fa9-bbdf-214bebcb805f"
+          },
+          {
+            "name": "DeleteMusic",
+            "comment": "음악삭제",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 74.17919921875,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "7d80fc11-b2d8-4775-9d01-1d8810164b79"
+          },
+          {
+            "name": "MusicID",
+            "comment": "음악ID",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b4a0ae4c-2d98-4456-a826-0cedb8bd09fd"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 164.9309,
+          "top": 381.5981,
+          "zIndex": 325,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "abb6de49-e649-4651-b549-b94c89e25874"
+      },
+      {
+        "name": "User",
+        "comment": "사용자",
+        "columns": [
+          {
+            "name": "UserID",
+            "comment": "사용자ID",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b63561a6-ab2e-4060-8027-cc24f60c1fae"
+          },
+          {
+            "name": "Name",
+            "comment": "이름",
+            "dataType": "VARCHAR2(255)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -90,166 +198,12 @@
               "widthDataType": 96.453125,
               "widthDefault": 60
             },
-            "id": "9c8e225b-5a6b-4ac5-8639-d6807eb8ff80"
-          },
-          {
-            "name": "",
-            "comment": "",
-            "dataType": "NUMBER",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "ab4ff44f-6793-4444-b119-843a7009cd8e"
-          },
-          {
-            "name": "",
-            "comment": "",
-            "dataType": "",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "3ee62da7-2997-4211-a73d-da160b41387b"
-          },
-          {
-            "name": "",
-            "comment": "",
-            "dataType": "",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "7756d36e-e021-4fa9-bbdf-214bebcb805f"
-          },
-          {
-            "name": "",
-            "comment": "",
-            "dataType": "",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "7d80fc11-b2d8-4775-9d01-1d8810164b79"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 79.8615,
-          "top": 376.3895,
-          "zIndex": 89,
-          "widthName": 60,
-          "widthComment": 60
-        },
-        "visible": true,
-        "id": "abb6de49-e649-4651-b549-b94c89e25874"
-      },
-      {
-        "name": "board",
-        "comment": "게시판",
-        "columns": [
-          {
-            "name": "board_no",
-            "comment": "게시글번호",
-            "dataType": "NUMBER",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 67,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "b63561a6-ab2e-4060-8027-cc24f60c1fae"
-          },
-          {
-            "name": "title",
-            "comment": "제목",
-            "dataType": "VARCHAR(100)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 89.29296875,
-              "widthDefault": 60
-            },
             "id": "bd306824-e2bd-4dab-a872-dab3d88c6270"
           },
           {
-            "name": "content",
-            "comment": "내용",
-            "dataType": "VARCHAR(2000)",
+            "name": "Email",
+            "comment": "이메일",
+            "dataType": "VARCHAR2(255)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -270,9 +224,9 @@
             "id": "2d8fb84f-884e-4545-b98f-6c3925452076"
           },
           {
-            "name": "writer",
-            "comment": "작성자",
-            "dataType": "VARCHAR(100)",
+            "name": "Password",
+            "comment": "비밀번호",
+            "dataType": "VARCHAR2(255)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -287,60 +241,14 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 89.29296875,
+              "widthDataType": 96.453125,
               "widthDefault": 60
             },
             "id": "2cd73963-d048-4d94-86a4-ba5c75967211"
           },
           {
-            "name": "reg_date",
-            "comment": "등록일자",
-            "dataType": "DATE",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "fd1035e0-42e3-4dcd-bb88-ca2d56e912aa"
-          },
-          {
-            "name": "upd_date",
-            "comment": "수정일자",
-            "dataType": "DATE",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "fae0125c-7e3c-44fd-96c1-46613c0933a1"
-          },
-          {
-            "name": "user_no",
-            "comment": "회원번호",
+            "name": "AdminID",
+            "comment": "관리자ID",
             "dataType": "NUMBER",
             "default": "",
             "option": {
@@ -359,19 +267,304 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "4a0b297b-865b-4e29-92b7-555b22e823b4"
+            "id": "5e53ef24-c61c-4b71-a4d2-34eb56e98837"
           }
         ],
         "ui": {
           "active": false,
-          "left": 75.0004,
-          "top": 29.1669,
-          "zIndex": 86,
+          "left": 143.5762,
+          "top": 54.341,
+          "zIndex": 327,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
         "id": "00e73704-8572-488f-b077-306dad1e25ba"
+      },
+      {
+        "name": "Playlist",
+        "comment": "재생목록",
+        "columns": [
+          {
+            "name": "PlaylistID",
+            "comment": "재생목록ID",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 66.8349609375,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8c7d8e28-258e-467c-8ed1-7c98f8fe4e46"
+          },
+          {
+            "name": "MusicName",
+            "comment": "음악이름",
+            "dataType": "VARCHAR2(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 71.51318359375,
+              "widthComment": 60,
+              "widthDataType": 96.453125,
+              "widthDefault": 60
+            },
+            "id": "348e6038-edec-461e-a9a7-40cb7d0fbe0c"
+          },
+          {
+            "name": "Owner",
+            "comment": "소유자",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "81fe63a0-790b-4305-a9ce-a4583474554b"
+          },
+          {
+            "name": "MusicID",
+            "comment": "음악ID",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5f2c9be9-ab14-4287-a386-1a9969fc3f1d"
+          },
+          {
+            "name": "UserID",
+            "comment": "사용자ID",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4874d807-b0a7-4d84-a1e7-d7624fa45837"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 639.5837,
+          "top": 76.3888,
+          "zIndex": 349,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "32579131-2ebb-4f14-a786-2215179dc2f4"
+      },
+      {
+        "name": "Music",
+        "comment": "음악",
+        "columns": [
+          {
+            "name": "MusicID",
+            "comment": "음악ID",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "411617cd-98ac-4e2a-a39b-09a87d7c5ab5"
+          },
+          {
+            "name": "Title",
+            "comment": "제목",
+            "dataType": "VARCHAR2(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 96.453125,
+              "widthDefault": 60
+            },
+            "id": "77d75eb7-e31e-4a13-b386-99c9dfeedeaa"
+          },
+          {
+            "name": "Artist",
+            "comment": "아티스트",
+            "dataType": "VARCHAR2(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 96.453125,
+              "widthDefault": 60
+            },
+            "id": "c79d57b4-b517-49c5-82f9-5b8e55d99ab2"
+          },
+          {
+            "name": "Album",
+            "comment": "앨범",
+            "dataType": "VARCHAR2(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 96.453125,
+              "widthDefault": 60
+            },
+            "id": "20e52a78-fdc6-4d41-a3e5-aa4a32e3e16e"
+          },
+          {
+            "name": "Genre",
+            "comment": "장르",
+            "dataType": "VARCHAR2(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 96.453125,
+              "widthDefault": 60
+            },
+            "id": "2a19dad6-8d68-4a0a-838b-e4e373b8802a"
+          },
+          {
+            "name": "AdminID",
+            "comment": "관리자ID",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e08186c6-dfaa-4027-bd99-933e36b63c8e"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 656.9448,
+          "top": 385.4168,
+          "zIndex": 319,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "2380ce37-e508-49e5-bbdb-de14e3289ae6"
       }
     ],
     "indexes": []
@@ -390,22 +583,100 @@
           "columnIds": [
             "b0abb109-8825-40cd-a60e-4f6647edd896"
           ],
-          "x": 271.5880625,
-          "y": 376.3895,
+          "x": 529.8234781250001,
+          "y": 457.0981,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "2380ce37-e508-49e5-bbdb-de14e3289ae6",
+          "columnIds": [
+            "e08186c6-dfaa-4027-bd99-933e36b63c8e"
+          ],
+          "x": 656.9448,
+          "y": 481.4168,
+          "direction": "left"
+        },
+        "constraintName": "fk_admin_to_music",
+        "visible": true,
+        "id": "6f1ebadd-c489-4662-8b06-533015f67ef4"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "2380ce37-e508-49e5-bbdb-de14e3289ae6",
+          "columnIds": [
+            "411617cd-98ac-4e2a-a39b-09a87d7c5ab5"
+          ],
+          "x": 848.6713625,
+          "y": 385.4168,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "32579131-2ebb-4f14-a786-2215179dc2f4",
+          "columnIds": [
+            "5f2c9be9-ab14-4287-a386-1a9969fc3f1d"
+          ],
+          "x": 840.484334765625,
+          "y": 247.8888,
+          "direction": "bottom"
+        },
+        "constraintName": "fk_music_to_playlist",
+        "visible": true,
+        "id": "8c9a4507-c371-487a-93e9-df97eb21dbcb"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "00e73704-8572-488f-b077-306dad1e25ba",
+          "columnIds": [
+            "b63561a6-ab2e-4060-8027-cc24f60c1fae"
+          ],
+          "x": 527.029325,
+          "y": 140.091,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "32579131-2ebb-4f14-a786-2215179dc2f4",
+          "columnIds": [
+            "4874d807-b0a7-4d84-a1e7-d7624fa45837"
+          ],
+          "x": 639.5837,
+          "y": 162.1388,
+          "direction": "left"
+        },
+        "constraintName": "fk_user_to_playlist",
+        "visible": true,
+        "id": "490dd108-69c8-48eb-9583-56561e35f3ca"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "abb6de49-e649-4651-b549-b94c89e25874",
+          "columnIds": [
+            "b0abb109-8825-40cd-a60e-4f6647edd896"
+          ],
+          "x": 347.3771890625,
+          "y": 381.5981,
           "direction": "top"
         },
         "end": {
           "tableId": "00e73704-8572-488f-b077-306dad1e25ba",
           "columnIds": [
-            "4a0b297b-865b-4e29-92b7-555b22e823b4"
+            "5e53ef24-c61c-4b71-a4d2-34eb56e98837"
           ],
-          "x": 270.2269625,
-          "y": 241.6669,
+          "x": 335.3027625,
+          "y": 225.841,
           "direction": "bottom"
         },
-        "constraintName": "fk_user_to_board",
+        "constraintName": "fk_admin_to_user",
         "visible": true,
-        "id": "cf04116f-f2a8-4e05-919e-38c9c714565a"
+        "id": "6a74baa5-419f-42a5-be0d-c7e88cebb269"
       }
     ]
   }

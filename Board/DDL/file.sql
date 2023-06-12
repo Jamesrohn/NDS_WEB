@@ -8,18 +8,20 @@ CREATE TABLE file (
     size NUMBER NOT NULL DEFAULT 0,             -- 파일 크기
     reg_date DATE NOT NULL DEFAULT sysdate,     -- 등록 일자
     upd_date DATE NOT NULL DEFAULT sysdate      -- 수정 일자
+    file_code NUMBER DEFAULT 0 NOT NULL         -- 파일 코드
 );
 
 
 -- 파일 테이블 (MySQL)
 CREATE TABLE `file` (
   `file_no` int NOT NULL AUTO_INCREMENT,
-  `name` text NOT NULL,
-  `path` text NOT NULL,
+  `file_name` text NOT NULL,
+  `file_npath` text NOT NULL,
   `parent_table` varchar(45) NOT NULL,
   `parent_no` int NOT NULL,
-  `size` int NOT NULL DEFAULT '0',
+  `file_nsize` int NOT NULL DEFAULT '0',
   `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `upd_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `file_code` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`file_no`)
 ) COMMENT='파일';
